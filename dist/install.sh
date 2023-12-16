@@ -5,10 +5,10 @@ export PATH
 VSRC_ROOT='/tmp/tls-shunt-proxy'
 DOWNLOAD_PATH='/tmp/tls-shunt-proxy/tls-shunt-proxy.zip'
 
-API_URL="https://api.github.com/repos/liberal-boy/tls-shunt-proxy/releases/0.31"
-DOWNLOAD_URL="$(curl "${PROXY}" -H "Accept: application/json" -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:74.0) Gecko/20100101 Firefox/74.0" -s "${API_URL}" --connect-timeout 10| grep 'browser_download_url' | cut -d\" -f4)"
+# API_URL="https://api.github.com/repos/liberal-boy/tls-shunt-proxy/releases/0.31"
+# DOWNLOAD_URL="$(curl "${PROXY}" -H "Accept: application/json" -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:74.0) Gecko/20100101 Firefox/74.0" -s "${API_URL}" --connect-timeout 10| grep 'browser_download_url' | cut -d\" -f4)"
 
-echo "${DOWNLOAD_URL}"
+# echo "${DOWNLOAD_URL}"
 
 mkdir -p "${VSRC_ROOT}"
 curl -L -H "Cache-Control: no-cache" -o "${DOWNLOAD_PATH}" "${DOWNLOAD_URL}"
